@@ -1,0 +1,60 @@
+/* Tamanho do Barra de pesquisa */
+.container{
+	max-width: 800px;
+	margin: auto;
+}
+
+#newTask{
+	height: 20px;
+	width: 80%;
+}
+/* Config botão */
+button{
+	height: 32px;
+	background-color: cornflowerblue;
+	color: white;
+	font-size: 1.2em;
+	border: none;
+}
+/* Config checkbox */
+#form-group label {
+	flex-direction: row;
+	margin-bottom: 15px;
+	align-items: center;
+	font-size: 25px;
+}
+#checkbox {
+	cursor: pointer;
+	appearance: none;
+	width: 30px;
+	height: 30px;
+	border: 3px solid cornflowerblue;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+  }
+#checkbox:before {
+	content: '';
+	background: transparent;
+	border: 4px solid cornflowerblue;
+	width: 15px;
+	height: 15px;
+	opacity: 1; /* Serve para alternar os checked */
+	transition: all 400ms ease-in-out;
+	position: absolute;
+	border-left: 0;
+	border-top: 0;
+	width: 7px;
+	height: 12px;
+	transform: rotate(45deg);
+	top: 2px;
+  }
+#checkbox:checked:before {
+	opacity: 0;
+  }
+#checkbox:focus {
+	box-shadow: 0 0 5px cornflowerblue;
+  }
